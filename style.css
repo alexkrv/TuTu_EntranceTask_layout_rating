@@ -1,0 +1,49 @@
+.rating{
+    display: inline-block;
+    margin: 0px;
+    padding: 0;
+    height: 20px;
+    list-style-type: none;
+    width:120px;
+}
+.container{
+    position:relative;
+    width: 270px;
+    height: 22px;
+    background-color: white;
+    box-shadow: 2px 2px 12px lightgray;
+    padding: 4px;
+    border: 1px solid rgb(240,240,240);
+    margin: 20px auto;
+}
+.text{
+    display: inline-block;
+    vertical-align: top;
+    font-family: Arial, sans-serif;
+    line-height: 22px;
+}
+.rating__star{
+    width: 22px;
+    height: 20px;
+    background-image: url(img/starGray.png);
+    background-size: 22px 20px;
+    background-repeat: no-repeat;
+    float:left;
+    margin: 0px;
+    padding: 1px;
+    cursor: pointer;
+}
+.rating:hover > .rating__star{
+    background-image: url(img/starOrange.png);
+    background-size: 22px 20px;
+    background-repeat: no-repeat;
+}
+.rating__star:hover ~.rating__star{
+    background-image: url(img/starGray.png);
+    background-size: 22px 20px;
+    background-repeat: no-repeat;
+}
+.checked{
+    background-image: url(img/starOrange.png);
+}
+

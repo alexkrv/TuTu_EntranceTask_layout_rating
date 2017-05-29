@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+     <script>
+        var stars = [];
+        window.onload=function(){
+            stars = document.getElementsByClassName("rating__star");
+            Array.prototype.forEach.call(stars, function (el){
+                el.addEventListener('click', change, false);
+            })
+        }
+        function change(){
+            var tmp = this.attributes[1].value;
+            for(var i = 0; i < stars.length; i++){
+                stars[i].classList.remove('checked');
+            }
+            for(var k = 0; k < tmp; k++){
+                stars[k].classList.add('checked');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <span class="text">Поставьте оценку: </span>
+        <ul class="rating">
+            <li class="rating__star" data-rating="1"></li>
+            <li class="rating__star" data-rating="2"></li>
+            <li class="rating__star" data-rating="3"></li>
+            <li class="rating__star" data-rating="4"></li>
+            <li class="rating__star" data-rating="5"></li>
+        </ul>
+    </div>  
+</body>
+</html>
